@@ -1,7 +1,7 @@
 part of '/weather_http.dart';
 
 class LocationApiServiceMock extends LocationApiServiceBase {
-  LocationApiServiceMock(super.httpClient, super.configuration);
+  const LocationApiServiceMock(super.httpClient, super.configuration);
 
   @override
   Future<ThrowableResponse<LocationSearchApiResponse>> searchAddress(

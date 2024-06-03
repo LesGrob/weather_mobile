@@ -11,7 +11,7 @@ class LocationApiResponse extends ApiResponse {
   final double latitude;
   final double longitude;
 
-  LocationApiResponse({
+  const LocationApiResponse({
     required this.type,
     required this.subType,
     required this.cityName,

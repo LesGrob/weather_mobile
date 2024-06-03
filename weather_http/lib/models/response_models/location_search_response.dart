@@ -3,7 +3,7 @@ part of '/weather_http.dart';
 class LocationSearchApiResponse extends ApiResponse {
   final List<LocationApiResponse> addresses;
 
-  LocationSearchApiResponse({required this.addresses});
+  const LocationSearchApiResponse({required this.addresses});
 
   LocationSearchApiResponse.fromJson(super.json)
       : addresses = (json["data"] as List)

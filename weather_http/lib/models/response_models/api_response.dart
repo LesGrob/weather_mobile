@@ -1,8 +1,8 @@
 part of '/weather_http.dart';
 
 abstract class ApiResponse {
-  ApiResponse();
+  const ApiResponse();
 
   // ignore: avoid_unused_constructor_parameters
-  ApiResponse.fromJson(Map<String, dynamic> json);
+  const ApiResponse.fromJson(Map<String, dynamic> json);
 }

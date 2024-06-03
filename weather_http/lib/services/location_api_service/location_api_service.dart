@@ -1,7 +1,7 @@
 part of '/weather_http.dart';
 
 class LocationApiService extends LocationApiServiceBase {
-  LocationApiService(super.httpClient, super.configuration);
+  const LocationApiService(super.httpClient, super.configuration);
 
   @override
   Future<ThrowableResponse<LocationSearchApiResponse>> searchAddress(
@@ -14,7 +14,7 @@ class LocationApiService extends LocationApiServiceBase {
         requestType: RequestType.get,
         queryParameters: {
           "keyword": searchText,
-          "max": max,
+          "max": max.toString(),
         },
       );
 }
