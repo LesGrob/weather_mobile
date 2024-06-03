@@ -7,7 +7,7 @@ class WeatherApiServiceMock extends WeatherApiServiceBase {
   Future<ThrowableResponse<WeatherResponse>> getWeather({
     required double latitude,
     required double longitude,
-    required String language,
+    String? language,
   }) async {
     await Future.delayed(const Duration(seconds: 1));
     return ThrowableResponse.success(

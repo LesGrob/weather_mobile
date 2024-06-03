@@ -98,6 +98,84 @@ abstract class WeatherAppLocalizations {
   /// In en, this message translates to:
   /// **'Something went wrong!\nPlease try again later.'**
   String get initErrorTitle;
+
+  /// No description provided for @weatherScreenTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Weather'**
+  String get weatherScreenTitle;
+
+  /// No description provided for @weatherScreenSearchLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Select City'**
+  String get weatherScreenSearchLabel;
+
+  /// No description provided for @weatherScreenEmptyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Select city to display weather.'**
+  String get weatherScreenEmptyTitle;
+
+  /// No description provided for @weatherScreenLoadingTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Weather data is loading.'**
+  String get weatherScreenLoadingTitle;
+
+  /// No description provided for @weatherScreenNoData.
+  ///
+  /// In en, this message translates to:
+  /// **'No weather for current city.'**
+  String get weatherScreenNoData;
+
+  /// No description provided for @tempBlockText.
+  ///
+  /// In en, this message translates to:
+  /// **'{temp} °C'**
+  String tempBlockText(num temp);
+
+  /// No description provided for @fellsLikeBlockText.
+  ///
+  /// In en, this message translates to:
+  /// **'Fells like: {temp} °C'**
+  String fellsLikeBlockText(num temp);
+
+  /// No description provided for @minTempBlockText.
+  ///
+  /// In en, this message translates to:
+  /// **'Min temp: {temp} °C'**
+  String minTempBlockText(num temp);
+
+  /// No description provided for @maxTempBlockText.
+  ///
+  /// In en, this message translates to:
+  /// **'Max temp: {temp} °C'**
+  String maxTempBlockText(num temp);
+
+  /// No description provided for @windSpeedBlockText.
+  ///
+  /// In en, this message translates to:
+  /// **'Wind speed: {speed} m/s'**
+  String windSpeedBlockText(num speed);
+
+  /// No description provided for @pressureBlockText.
+  ///
+  /// In en, this message translates to:
+  /// **'Pressure: {pressure} hPa'**
+  String pressureBlockText(num pressure);
+
+  /// No description provided for @humidityBlockText.
+  ///
+  /// In en, this message translates to:
+  /// **'Humidity: {humidity} %'**
+  String humidityBlockText(num humidity);
+
+  /// No description provided for @visibilityBlockText.
+  ///
+  /// In en, this message translates to:
+  /// **'Visibility: {visibility} m'**
+  String visibilityBlockText(num visibility);
 }
 
 class _WeatherAppLocalizationsDelegate extends LocalizationsDelegate<WeatherAppLocalizations> {

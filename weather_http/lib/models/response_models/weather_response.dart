@@ -35,10 +35,10 @@ class WeatherResponse extends ApiResponse {
   final double humidity;
 
   /// Atmospheric pressure on the sea level, hPa
-  final double seaLevel;
+  final double? seaLevel;
 
   /// Atmospheric pressure on the ground level, hPa
-  final double grndLevel;
+  final double? grndLevel;
 
   /// Visibility, meter. The maximum value of the visibility is 10 km
   final int visibility;
@@ -50,7 +50,7 @@ class WeatherResponse extends ApiResponse {
   final double windDeg;
 
   /// Wind gust. Unit Default: meter/sec, Metric: meter/sec, Imperial: miles/hour
-  final double windGust;
+  final double? windGust;
 
   /// Cloudiness, %
   final double clouds;
@@ -114,12 +114,12 @@ class WeatherResponse extends ApiResponse {
         tempMax = ((json["main"] as Map)["temp_max"] as num).toDouble(),
         pressure = ((json["main"] as Map)["pressure"] as num).toDouble(),
         humidity = ((json["main"] as Map)["humidity"] as num).toDouble(),
-        seaLevel = ((json["main"] as Map)["sea_level"] as num).toDouble(),
-        grndLevel = ((json["main"] as Map)["grnd_level"] as num).toDouble(),
+        seaLevel = ((json["main"] as Map)["sea_level"] as num?)?.toDouble(),
+        grndLevel = ((json["main"] as Map)["grnd_level"] as num?)?.toDouble(),
         visibility = json["visibility"] as int,
         windSpeed = ((json["wind"] as Map)["speed"] as num).toDouble(),
         windDeg = ((json["wind"] as Map)["deg"] as num).toDouble(),
-        windGust = ((json["wind"] as Map)["gust"] as num).toDouble(),
+        windGust = ((json["wind"] as Map)["gust"] as num?)?.toDouble(),
         clouds = ((json["clouds"] as Map)["all"] as num).toDouble(),
         rain1h = ((json["rain"] as Map?)?["1h"] as num?)?.toDouble(),
         rain3h = ((json["rain"] as Map?)?["3h"] as num?)?.toDouble(),

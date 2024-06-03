@@ -23,7 +23,7 @@ abstract class HttpProviderBase {
     required HttpServiceConfiguration weatherApiConfig,
     required HttpServiceConfiguration locationApiConfig,
   }) : this(
-          weather: WeatherApiService(httpClient, weatherApiConfig),
+          weather: WeatherApiServiceMock(httpClient, weatherApiConfig),
           location: LocationApiServiceMock(httpClient, locationApiConfig),
         );
 }

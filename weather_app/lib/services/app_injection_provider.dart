@@ -34,6 +34,9 @@ class AppInjectionProvider {
     GetIt.I.registerSingleton<AppReportService>(reportService);
 
     /// Providers injection
+    // final httpProvider = AppHttpProvider.mock(
+    //   MockClient((_) async => Response("body", 200)),
+    // );
     final httpProvider = AppHttpProvider.production(
       reportService: reportService,
     );

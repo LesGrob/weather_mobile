@@ -23,3 +23,7 @@ part 'directories/app_icons.dart';
 part 'directories/app_images.dart';
 part 'directories/app_colors.dart';
 part 'directories/app_material_app_themes.dart';
+
+part 'widgets/base_app_bar.dart';
+part 'widgets/base_scaffold.dart';
+part 'widgets/custom_dropdown_menu.dart';

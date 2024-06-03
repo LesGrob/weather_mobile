@@ -13,7 +13,7 @@
                 "--dart-define",
                 "WEATHER_API_KEY=0441eded840474590ba00623319acae0",
                 "--dart-define",
-                "LOCATION_API_KEY=69uUPeTx5UiAYNkOuO4KZLaUSoGa",
+                "LOCATION_API_KEY=Qmy0vxkhvo9LAdupv3loGGzADFdx",
             ],
         },
         {
@@ -26,7 +26,7 @@
                 "--dart-define",
                 "WEATHER_API_KEY=0441eded840474590ba00623319acae0",
                 "--dart-define",
-                "LOCATION_API_KEY=69uUPeTx5UiAYNkOuO4KZLaUSoGa",
+                "LOCATION_API_KEY=Qmy0vxkhvo9LAdupv3loGGzADFdx",
             ],
         },
         {
@@ -39,7 +39,7 @@
                 "--dart-define",
                 "WEATHER_API_KEY=0441eded840474590ba00623319acae0",
                 "--dart-define",
-                "LOCATION_API_KEY=69uUPeTx5UiAYNkOuO4KZLaUSoGa",
+                "LOCATION_API_KEY=Qmy0vxkhvo9LAdupv3loGGzADFdx",
             ],
         },
     ]

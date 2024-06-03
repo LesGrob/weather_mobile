@@ -36,10 +36,10 @@ class Weather {
   final double humidity;
 
   /// Atmospheric pressure on the sea level, hPa
-  final double seaLevel;
+  final double? seaLevel;
 
   /// Atmospheric pressure on the ground level, hPa
-  final double grndLevel;
+  final double? grndLevel;
 
   /// Visibility, meter. The maximum value of the visibility is 10 km
   final int visibility;
@@ -51,7 +51,7 @@ class Weather {
   final double windDeg;
 
   /// Wind gust. Unit Default: meter/sec, Metric: meter/sec, Imperial: miles/hour
-  final double windGust;
+  final double? windGust;
 
   /// Cloudiness, %
   final double clouds;

@@ -1,3 +1,57 @@
 {
-    "initErrorTitle": "Something went wrong!\nPlease try again later."
+    "initErrorTitle": "Something went wrong!\nPlease try again later.",
+    "weatherScreenTitle": "Weather",
+    "weatherScreenSearchLabel": "Select City",
+    "weatherScreenEmptyTitle": "Select city to display weather.",
+    "weatherScreenLoadingTitle": "Weather data is loading.",
+    "weatherScreenNoData": "No weather for current city.",
+    
+    "tempBlockText": "{temp} °C",
+    "@tempBlockText": {
+        "placeholders": {
+            "temp": { "type": "num" }
+        }
+    },
+    "fellsLikeBlockText": "Fells like: {temp} °C",
+    "@fellsLikeBlockText": {
+        "placeholders": {
+            "temp": { "type": "num" }
+        }
+    },
+    "minTempBlockText": "Min temp: {temp} °C",
+    "@minTempBlockText": {
+        "placeholders": {
+            "temp": { "type": "num" }
+        }
+    },
+    "maxTempBlockText": "Max temp: {temp} °C",
+    "@maxTempBlockText": {
+        "placeholders": {
+            "temp": { "type": "num" }
+        }
+    },
+    "windSpeedBlockText": "Wind speed: {speed} m/s",
+    "@windSpeedBlockText": {
+        "placeholders": {
+            "speed": { "type": "num" }
+        }
+    },
+    "pressureBlockText": "Pressure: {pressure} hPa",
+    "@pressureBlockText": {
+        "placeholders": {
+            "pressure": { "type": "num" }
+        }
+    },
+    "humidityBlockText": "Humidity: {humidity} %",
+    "@humidityBlockText": {
+        "placeholders": {
+            "humidity": { "type": "num" }
+        }
+    },
+    "visibilityBlockText": "Visibility: {visibility} m",
+    "@visibilityBlockText": {
+        "placeholders": {
+            "visibility": { "type": "num" }
+        }
+    }
 }

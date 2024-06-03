@@ -5,7 +5,7 @@ class LocationApiResponse extends ApiResponse {
   final String subType;
 
   final String cityName;
-  final String iataCode;
+  final String? iataCode;
   final String? countryCode;
 
   final double latitude;

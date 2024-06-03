@@ -45,6 +45,24 @@ mixin _$WeatherStore on _WeatherStore, Store {
     });
   }
 
+  late final _$_hasLoadingErrorAtom =
+      Atom(name: '_WeatherStore._hasLoadingError', context: context);
+
+  bool get hasLoadingError {
+    _$_hasLoadingErrorAtom.reportRead();
+    return super._hasLoadingError;
+  }
+
+  @override
+  bool get _hasLoadingError => hasLoadingError;
+
+  @override
+  set _hasLoadingError(bool value) {
+    _$_hasLoadingErrorAtom.reportWrite(value, super._hasLoadingError, () {
+      super._hasLoadingError = value;
+    });
+  }
+
   late final _$_citiesAtom =
       Atom(name: '_WeatherStore._cities', context: context);
 
@@ -81,6 +99,24 @@ mixin _$WeatherStore on _WeatherStore, Store {
     });
   }
 
+  late final _$_selectedCityAtom =
+      Atom(name: '_WeatherStore._selectedCity', context: context);
+
+  Location? get selectedCity {
+    _$_selectedCityAtom.reportRead();
+    return super._selectedCity;
+  }
+
+  @override
+  Location? get _selectedCity => selectedCity;
+
+  @override
+  set _selectedCity(Location? value) {
+    _$_selectedCityAtom.reportWrite(value, super._selectedCity, () {
+      super._selectedCity = value;
+    });
+  }
+
   late final _$_searchCitiesAsyncAction =
       AsyncAction('_WeatherStore._searchCities', context: context);
 
@@ -94,9 +130,9 @@ mixin _$WeatherStore on _WeatherStore, Store {
       AsyncAction('_WeatherStore.fetchWeatherFor', context: context);
 
   @override
-  Future<void> fetchWeatherFor(Location location, String language) {
+  Future<void> fetchWeatherFor(Location location, {String? language}) {
     return _$fetchWeatherForAsyncAction
-        .run(() => super.fetchWeatherFor(location, language));
+        .run(() => super.fetchWeatherFor(location, language: language));
   }
 
   @override

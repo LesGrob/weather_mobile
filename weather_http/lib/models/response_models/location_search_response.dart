@@ -6,8 +6,16 @@ class LocationSearchApiResponse extends ApiResponse {
   const LocationSearchApiResponse({required this.addresses});
 
   LocationSearchApiResponse.fromJson(super.json)
-      : addresses = (json["data"] as List)
-            .map((e) => LocationApiResponse.fromJson(e))
-            .toList(),
+      : addresses = (json["data"] as List?)
+                ?.map((e) {
+                  try {
+                    return LocationApiResponse.fromJson(e);
+                  } catch (_) {
+                    return null;
+                  }
+                })
+                .whereType<LocationApiResponse>()
+                .toList() ??
+            [],
         super.fromJson();
 }

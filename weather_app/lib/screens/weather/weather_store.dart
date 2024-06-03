@@ -18,12 +18,16 @@ abstract class _WeatherStore extends VPDDataStore with Store {
   bool _isCitiesLoading = false;
   @readonly
   bool _isWeatherLoading = false;
+  @readonly
+  bool _hasLoadingError = false;
 
   @readonly
   List<Location> _cities = [];
 
   @readonly
   Weather? _weather;
+  @readonly
+  Location? _selectedCity;
 
   _WeatherStore({
     required this.httpProvider,
@@ -36,6 +40,14 @@ abstract class _WeatherStore extends VPDDataStore with Store {
 
   @action
   Future<void> _searchCities(String searchText) async {
+    if (searchText.length < 4) {
+      transaction(() {
+        _cities = [];
+        _isCitiesLoading = false;
+      });
+      return;
+    }
+
     _isCitiesLoading = true;
     final result = await httpProvider.location.searchAddress(searchText);
     transaction(() {
@@ -52,10 +64,15 @@ abstract class _WeatherStore extends VPDDataStore with Store {
 
   @action
   Future<void> fetchWeatherFor(
-    Location location,
-    String language,
-  ) async {
-    _isWeatherLoading = true;
+    Location location, {
+    String? language,
+  }) async {
+    if (location == _selectedCity) return;
+
+    transaction(() {
+      _isWeatherLoading = true;
+      _selectedCity = location;
+    });
     final result = await httpProvider.weather.getWeather(
       latitude: location.latitude,
       longitude: location.longitude,
@@ -63,9 +80,13 @@ abstract class _WeatherStore extends VPDDataStore with Store {
     );
     transaction(() {
       result.handle(
-        onFailure: reportService.logException,
+        onFailure: (error) {
+          reportService.logException(error);
+          _hasLoadingError = true;
+        },
         onSuccess: (data) {
           _weather = Weather.fromApiModel(data);
+          _hasLoadingError = false;
         },
       );
       _isWeatherLoading = false;

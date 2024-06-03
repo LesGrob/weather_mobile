@@ -6,6 +6,6 @@ abstract class WeatherApiServiceBase extends HttpService {
   Future<ThrowableResponse<WeatherResponse>> getWeather({
     required double latitude,
     required double longitude,
-    required String language,
+    String? language,
   });
 }

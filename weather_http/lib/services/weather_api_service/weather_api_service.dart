@@ -7,7 +7,7 @@ class WeatherApiService extends WeatherApiServiceBase {
   Future<ThrowableResponse<WeatherResponse>> getWeather({
     required double latitude,
     required double longitude,
-    required String language,
+    String? language,
   }) =>
       makeRequest(
         (json) => WeatherResponse.fromJson(json),
@@ -16,7 +16,7 @@ class WeatherApiService extends WeatherApiServiceBase {
         queryParameters: {
           "lat": latitude.toString(),
           "lon": longitude.toString(),
-          "lang": language,
+          if (language != null) "lang": language,
           "appid": configuration.apiKey,
           "units": "metric",
         },

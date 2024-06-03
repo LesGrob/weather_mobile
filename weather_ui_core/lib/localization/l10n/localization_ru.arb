@@ -1,3 +1,57 @@
 {
-    "initErrorTitle": "Что-то пошло не так!\nПовторите попытку позже."
+    "initErrorTitle": "Что-то пошло не так!\nПовторите попытку позже.",
+    "weatherScreenTitle": "Погода",
+    "weatherScreenSearchLabel": "Выберите город",
+    "weatherScreenEmptyTitle": "Выберите город, чтобы отобразить данные",
+    "weatherScreenLoadingTitle": "Данные о погоде загружаются.",
+    "weatherScreenNoData": "Нет данным о погоде в выбранном городе.",
+    
+    "tempBlockText": "{temp} °C",
+    "@tempBlockText": {
+        "placeholders": {
+            "temp": { "type": "num" }
+        }
+    },
+    "fellsLikeBlockText": "Ощущается как: {temp} °C",
+    "@fellsLikeBlockText": {
+        "placeholders": {
+            "temp": { "type": "num" }
+        }
+    },
+    "minTempBlockText": "Мин температура: {temp} °C",
+    "@minTempBlockText": {
+        "placeholders": {
+            "temp": { "type": "num" }
+        }
+    },
+    "maxTempBlockText": "Макс температура: {temp} °C",
+    "@maxTempBlockText": {
+        "placeholders": {
+            "temp": { "type": "num" }
+        }
+    },
+    "windSpeedBlockText": "Скорость ветра: {speed} m/s",
+    "@windSpeedBlockText": {
+        "placeholders": {
+            "speed": { "type": "num" }
+        }
+    },
+    "pressureBlockText": "Давление: {pressure} hPa",
+    "@pressureBlockText": {
+        "placeholders": {
+            "pressure": { "type": "num" }
+        }
+    },
+    "humidityBlockText": "Влажность: {humidity} %",
+    "@humidityBlockText": {
+        "placeholders": {
+            "humidity": { "type": "num" }
+        }
+    },
+    "visibilityBlockText": "Видимость: {visibility} м",
+    "@visibilityBlockText": {
+        "placeholders": {
+            "visibility": { "type": "num" }
+        }
+    }
 }
