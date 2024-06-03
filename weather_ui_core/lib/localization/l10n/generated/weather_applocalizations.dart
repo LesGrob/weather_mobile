@@ -93,11 +93,11 @@ abstract class WeatherAppLocalizations {
     Locale('ru')
   ];
 
-  /// No description provided for @apply.
+  /// No description provided for @initErrorTitle.
   ///
   /// In en, this message translates to:
-  /// **'Apply'**
-  String get apply;
+  /// **'Something went wrong!\nPlease try again later.'**
+  String get initErrorTitle;
 }
 
 class _WeatherAppLocalizationsDelegate extends LocalizationsDelegate<WeatherAppLocalizations> {

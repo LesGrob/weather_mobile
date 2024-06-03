@@ -5,5 +5,5 @@ class WeatherAppLocalizationsRu extends WeatherAppLocalizations {
   WeatherAppLocalizationsRu([String locale = 'ru']) : super(locale);
 
   @override
-  String get apply => 'Подтвердить';
+  String get initErrorTitle => 'Что-то пошло не так!\nПовторите попытку позже.';
 }

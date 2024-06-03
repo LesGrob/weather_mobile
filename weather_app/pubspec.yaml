@@ -13,6 +13,13 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
+  weather_core:
+    path: ../weather_core
+  weather_http:
+    path: ../weather_http
+  weather_ui_core:
+    path: ../weather_ui_core
+
   get_it: 7.6.7
   provider: 6.1.2
 
@@ -20,6 +27,7 @@ dependencies:
   flutter_mobx: 2.2.1+1
 
   http: 1.2.1
+  http_interceptor: 2.0.0-beta.8
 
 dev_dependencies:
   flutter_test:
@@ -34,18 +42,18 @@ flutter:
   fonts:
     - family: SFUIText
       fonts:
-        - asset: packages/weather_ui_core/assets/fonts/SFUIText-Bold.ttf
+        - asset: packages/weather_ui_core/fonts/SFUIText-Bold.ttf
           weight: 700
-        - asset: packages/weather_ui_core/assets/fonts/SFUIText-Heavy.ttf
+        - asset: packages/weather_ui_core/fonts/SFUIText-Heavy.ttf
           weight: 800
-        - asset: packages/weather_ui_core/assets/fonts/SFUIText-Semibold.ttf
+        - asset: packages/weather_ui_core/fonts/SFUIText-Semibold.ttf
           weight: 600
-        - asset: packages/weather_ui_core/assets/fonts/SFUIText-Medium.ttf
+        - asset: packages/weather_ui_core/fonts/SFUIText-Medium.ttf
           weight: 500
-        - asset: packages/weather_ui_core/assets/fonts/SFUIText-Regular.ttf
+        - asset: packages/weather_ui_core/fonts/SFUIText-Regular.ttf
           weight: 400
           style: normal
-        - asset: packages/weather_ui_core/assets/fonts/SFUIText-Light.ttf
+        - asset: packages/weather_ui_core/fonts/SFUIText-Light.ttf
           weight: 300
-        - asset: packages/weather_ui_core/assets/fonts/SFUIText-UltraLight.ttf
+        - asset: packages/weather_ui_core/fonts/SFUIText-UltraLight.ttf
           weight: 200

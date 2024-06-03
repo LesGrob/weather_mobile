@@ -17,7 +17,7 @@ class WeatherApiService extends WeatherApiServiceBase {
           "lat": latitude.toString(),
           "lon": longitude.toString(),
           "lang": language,
-          "appid": (configuration as WeatherHttpServiceConfiguration).apiKey,
+          "appid": configuration.apiKey,
           "units": "metric",
         },
       );

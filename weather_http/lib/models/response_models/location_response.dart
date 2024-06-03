@@ -27,7 +27,7 @@ class LocationApiResponse extends ApiResponse {
         cityName = json["name"],
         iataCode = json["iataCode"],
         countryCode = (json["address"] as Map?)?["CountryCode"],
-        latitude = double.parse((json["geoCode"] as Map)["latitude"]),
-        longitude = double.parse((json["geoCode"] as Map)["longitude"]),
+        latitude = (json["geoCode"] as Map)["latitude"],
+        longitude = (json["geoCode"] as Map)["longitude"],
         super.fromJson();
 }

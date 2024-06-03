@@ -7,7 +7,7 @@ part of '/weather_ui_core.dart';
 ///
 /// REQUIRED: AppTheme should be injected with [Provider] to the whole app
 /// so [keepstuff_shared_ui] package can use it.
-abstract class AppTheme extends ChangeNotifier {
+class AppTheme extends ChangeNotifier {
   static const String _appThemeCode = "APP_THEME_CODE";
 
   AppThemeData _themeData;
@@ -34,7 +34,9 @@ abstract class AppTheme extends ChangeNotifier {
     notifyListeners();
   }
 
-  static Future<AppThemeData> getFromCache({AppThemeData? defaultData}) async {
+  static Future<AppThemeData> getDataFromCache({
+    AppThemeData? defaultData,
+  }) async {
     final SharedPreferences sharedPreferences =
         await SharedPreferences.getInstance();
     final String? code = sharedPreferences.getString(_appThemeCode);

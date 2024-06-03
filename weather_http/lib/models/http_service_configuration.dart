@@ -7,11 +7,14 @@ class HttpServiceConfiguration {
   final String serverUrl;
   final String serverApiUrl;
 
+  final String apiKey;
+
   const HttpServiceConfiguration({
     required this.environmentType,
     required this.urlProtocol,
     required this.serverUrl,
     required this.serverApiUrl,
+    required this.apiKey,
   });
 
   Uri createServerUri(

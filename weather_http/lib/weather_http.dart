@@ -15,9 +15,7 @@ part 'models/network_exceptions.dart';
 part 'models/request_type.dart';
 part 'models/url_protocol.dart';
 
-part 'models/configuration/http_service_configuration.dart';
-part 'models/configuration/weather_http_service_configuration.dart';
-
+part 'models/http_service_configuration.dart';
 part 'models/request_models/api_request.dart';
 
 part 'models/response_models/api_response.dart';

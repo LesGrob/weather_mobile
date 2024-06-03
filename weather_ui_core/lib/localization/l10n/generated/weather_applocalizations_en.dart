@@ -5,5 +5,5 @@ class WeatherAppLocalizationsEn extends WeatherAppLocalizations {
   WeatherAppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get apply => 'Apply';
+  String get initErrorTitle => 'Something went wrong!\nPlease try again later.';
 }

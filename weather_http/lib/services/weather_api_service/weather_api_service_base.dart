@@ -1,10 +1,7 @@
 part of '/weather_http.dart';
 
 abstract class WeatherApiServiceBase extends HttpService {
-  const WeatherApiServiceBase(
-    super.httpClient,
-    WeatherHttpServiceConfiguration super.configuration,
-  );
+  const WeatherApiServiceBase(super.httpClient, super.configuration);
 
   Future<ThrowableResponse<WeatherResponse>> getWeather({
     required double latitude,

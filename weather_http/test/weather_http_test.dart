@@ -13,6 +13,7 @@ void main() {
       urlProtocol: URLProtocol.https,
       serverUrl: "test.api.amadeus.com",
       serverApiUrl: "/v1/",
+      apiKey: "",
     );
     test('Success response', () async {
       final client = MockClient((request) async {
@@ -24,7 +25,7 @@ void main() {
               "name": "PARIS",
               "iataCode": "PAR",
               "address": {"CountryCode": "FR"},
-              "geoCode": {"latitude": "49.01278", "longitude": "2.55"},
+              "geoCode": {"latitude": 49.01278, "longitude": 2.55},
               "relationships": [
                 {
                   "id": "CDG",
@@ -122,12 +123,12 @@ void main() {
   });
 
   group('Weather API test', () {
-    final httpConfiguration = WeatherHttpServiceConfiguration(
-      apiKey: "",
+    final httpConfiguration = HttpServiceConfiguration(
       environmentType: EnvironmentType.mock,
       urlProtocol: URLProtocol.https,
       serverUrl: "api.openweathermap.org",
       serverApiUrl: "/data/2.5/",
+      apiKey: "",
     );
     test('Success response', () async {
       final client = MockClient((request) async {

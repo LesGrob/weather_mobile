@@ -16,5 +16,6 @@ class LocationApiService extends LocationApiServiceBase {
           "keyword": searchText,
           "max": max.toString(),
         },
+        headers: {"Authorization": "Bearer ${configuration.apiKey}"},
       );
 }
